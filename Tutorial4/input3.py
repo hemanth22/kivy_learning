@@ -14,14 +14,14 @@ class MyGridLayout(GridLayout):
 		# Set columns 
 		self.cols = 1
 		# Create a second layout
-		self.top_grid = GridLayout()
+		self.top_grid = GridLayout(row_force_default=True,row_default_height=40,col_force_default=True,col_default_width=100)
 		self.top_grid.cols = 2
 
 
 		# Add widgets
-		self.top_grid.add_widget(Label(text="Name: ",size_hint_y=None,height=50,size_hint_x=None,width=200))
+		self.top_grid.add_widget(Label(text="Name: "))
 		# Add Input Box
-		self.name = TextInput(multiline=False,size_hint_y=None,height=50,size_hint_x=None,width=400)
+		self.name = TextInput(multiline=False)
 		self.top_grid.add_widget(self.name)
 
 
