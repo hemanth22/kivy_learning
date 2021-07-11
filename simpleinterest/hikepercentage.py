@@ -18,9 +18,13 @@ class MyGridLayout(Widget):
     def simpleiint(self):
         oldsalary = self.oldsalary.text
         newsalary = self.newsalary.text
-        print('Your hike {0}%'.format(round((((int(newsalary)-int(oldsalary)) / int(oldsalary)) * 100),2)))
-        self.oldsalary.text = ""
-        self.newsalary.text = ""
+        result_percent = round((((int(newsalary)-int(oldsalary)) / int(oldsalary)) * 100),2)
+        print('Your hike {0}%'.format(result_percent))
+        self.oldsalary.text = ''
+        self.newsalary.text = ''
+        self.ids.name_label2.text = ''
+        self.ids.name_label2.text = f'{result_percent}%'
+        
 
 class hikeApp(App):
     def build(self):
