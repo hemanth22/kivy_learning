@@ -12,7 +12,8 @@ Window.size = (500,700)
 Builder.load_file('calc.kv') #This will load any kind of kivy file not mandatory to follow class name in kivy
 
 class MyLayout(Widget):
-    pass
+    def clear(self):
+        self.ids.calc_input.text = ''
 
 class CalculatorApp(App):
     def build(self):
