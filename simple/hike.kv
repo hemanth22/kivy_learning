@@ -1,0 +1,38 @@
+<MyGridLayout>
+
+    oldsalary:oldsalary
+    newsalary:newsalary
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "oldsalary"
+
+            TextInput:
+                id: oldsalary
+                multiline:False
+
+            Label:
+                text: "newsalary"
+
+            TextInput:
+                id: newsalary
+                multiline:False
+
+            Label:
+                id: name_label
+                text: "Hike Percentage"
+
+            Label:
+                id: name_label2
+                #text: "Here"
+                font_size: 32
+
+        Button:
+            text: "Submit"
+            font_size: 32
+            on_press: root.simpleiint()
