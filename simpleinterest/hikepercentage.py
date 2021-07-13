@@ -20,10 +20,9 @@ class MyGridLayout(Widget):
         newsalary = self.newsalary.text
         result_percent = round((((int(newsalary)-int(oldsalary)) / int(oldsalary)) * 100),2)
         print('Your hike {0}%'.format(result_percent))
-        self.oldsalary.text = ''
-        self.newsalary.text = ''
-        self.ids.name_label2.text = ''
         self.ids.name_label2.text = f'{result_percent}%'
+        self.ids.oldsalary.text = ''
+        self.ids.newsalary.text = ''
         
 
 class hikeApp(App):
