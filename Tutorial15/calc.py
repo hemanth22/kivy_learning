@@ -13,7 +13,7 @@ Builder.load_file('calc.kv') #This will load any kind of kivy file not mandatory
 
 class MyLayout(Widget):
     def clear(self):
-        self.ids.calc_input.text = ''
+        self.ids.calc_input.text = '0'
 
 class CalculatorApp(App):
     def build(self):

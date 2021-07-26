@@ -6,33 +6,47 @@
     GridLayout:
         cols:1
         size: root.width, root.height
+        padding: 50
+        spacing: 20
         GridLayout:
             cols:2
 
             Label:
                 text: "oldsalary"
+                font_size: 32
+                size_hint: (1, 0.2)
+
 
             TextInput:
                 id: oldsalary
                 multiline:False
+                size_hint: (1, 0.2)
 
             Label:
                 text: "newsalary"
+                font_size: 32
+                size_hint: (1, 0.2)
 
             TextInput:
                 id: newsalary
                 multiline:False
+                size_hint: (1, 0.2)
 
             Label:
                 id: name_label
                 text: "Hike Percentage"
+                font_size: 32
+                size_hint: (1, 0.2)
 
             Label:
                 id: name_label2
                 #text: "Here"
                 font_size: 32
+                size_hint: (1, 0.2)
 
         Button:
             text: "Submit"
             font_size: 32
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, 0.2)
             on_press: root.simpleiint()
