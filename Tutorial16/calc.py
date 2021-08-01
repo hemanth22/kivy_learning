@@ -25,7 +25,7 @@ class MyLayout(Widget):
             
     def add(self):
         prior = self.ids.calc_input.text
-        self.ids.calc_input.text = f'{prior}'
+        self.ids.calc_input.text = f'{prior}+'
 
 class CalculatorApp(App):
     def build(self):
