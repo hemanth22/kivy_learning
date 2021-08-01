@@ -23,6 +23,12 @@ class MyLayout(Widget):
         else:
             self.ids.calc_input.text = f'{prior}{button}'
 
+
+    def remove(self):
+        prior = self.ids.calc_input.text
+        prior = prior[:-1]
+        self.ids.calc_input.text = prior
+
     def dot(self):
         prior = self.ids.calc_input.text
         
