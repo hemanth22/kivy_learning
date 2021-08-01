@@ -27,6 +27,31 @@ class MyLayout(Widget):
         prior = self.ids.calc_input.text
         self.ids.calc_input.text = f'{prior}+'
 
+    def subtract(self):
+        prior = self.ids.calc_input.text
+        self.ids.calc_input.text = f'{prior}-'
+        
+    def multiply(self):
+        prior = self.ids.calc_input.text
+        self.ids.calc_input.text = f'{prior}*'
+        
+    def divide(self):
+        prior = self.ids.calc_input.text
+        self.ids.calc_input.text = f'{prior}/'
+        
+
+    def equals(self):
+        prior = self.ids.calc_input.text
+        
+        if "+" in prior:
+            num_list = prior.split("+")
+            #print(num_list)
+            answer = 0
+            for number in num_list:
+                answer = answer + int(number)
+                #print(answer)
+                self.ids.calc_input.text = str(answer)
+
 class CalculatorApp(App):
     def build(self):
         return MyLayout()
