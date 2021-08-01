@@ -29,6 +29,13 @@ class MyLayout(Widget):
         prior = prior[:-1]
         self.ids.calc_input.text = prior
 
+    def pos_neg(self):
+        prior = self.ids.calc_input.text
+        if "-" in prior:
+            self.ids.calc_input.text = f'{prior.replace("-","")}'
+        else:
+            self.ids.calc_input.text = f'-{prior}'
+        
     def dot(self):
         prior = self.ids.calc_input.text
         
@@ -48,9 +55,9 @@ class MyLayout(Widget):
         if "+" in prior:
             num_list = prior.split("+")
             #print(num_list)
-            answer = 0
+            answer = 0.0
             for number in num_list:
-                answer = answer + int(number)
+                answer = answer + float(number)
                 #print(answer)
                 self.ids.calc_input.text = str(answer)
 
